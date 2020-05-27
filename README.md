@@ -24,3 +24,7 @@ The actual implementation of the service, such as it is, is in
 request\_handler.c. The rest of the code just starts the HTTP server, parses
 the command line, handles signals, and does logging.
 
+To build the example you'll need the libmicrohttpd development files
+-- e.g., `dnf install libmicrohttpd-devel`. Although libmicrohttpd has
+dependencies, I don't think my code has any dependencies of its own.
+
