@@ -20,6 +20,9 @@ Then invoke it like this:
     $ curl http://localhost:8080/greet/fred
     {"hello": "fred"}
 
+As well as a /greet API, there's also a /health API, that just returns
+an OK message, and a /metrics API that returns request counts.
+
 The actual implementation of the service, such as it is, is in
 request\_handler.c. The rest of the code just starts the HTTP server, parses
 the command line, handles signals, and does logging.
