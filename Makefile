@@ -10,7 +10,7 @@ DESTDIR := /
 PREFIX  := /usr
 BINDIR  := $(DESTDIR)/$(PREFIX)/bin
 SHARE   := $(DESTDIR)/$(PREFIX)/share/$(TARGET)
-CFLAGS  := -O3 -fpie -fpic -Wall -Werror -DNAME=\"$(NAME)\" -DVERSION=\"$(VERSION)\" -DSHARE=\"$(SHARE)\" -DPREFIX=\"$(PREFIX)\" -I include ${EXTRA_CFLAGS} -ffunction-sections -fdata-sections
+CFLAGS  := -O3 -fpie -fpic -Wall -DNAME=\"$(NAME)\" -DVERSION=\"$(VERSION)\" -DSHARE=\"$(SHARE)\" -DPREFIX=\"$(PREFIX)\" -I include ${EXTRA_CFLAGS} -ffunction-sections -fdata-sections
 LDFLAGS := -s -pie -Wl,--gc-sections   ${EXTRA_LDFLAGS}
 
 $(TARGET): $(OBJECTS) 
